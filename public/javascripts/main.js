@@ -6,7 +6,11 @@ require.config({
     underscore: 'lib/underscore-amd/underscore-min',
     backbone: 'lib/backbone-amd/backbone-min',
     text: 'lib/requirejs-text/text',
-    socketio: 'lib/socket.io-client/dist/socket.io.min'
+    socketio: 'lib/socket.io-client/dist/socket.io.min',
+    dropzone: 'include/dropzone.min',
+
+    // views
+    PhotoUploadView: 'views/photoUploadView'
   },
   shim: {
     underscore: {
@@ -18,6 +22,9 @@ require.config({
     },
     bootstrap: {
       deps: ['jquery']
+    },
+    PhotoUploadView: {
+      deps: ['dropzone']
     }
   },
   urlArgs: "ver=0.0"
